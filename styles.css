@@ -1,0 +1,181 @@
+#title {
+    background-color: #e9213fde;
+    color: white;
+}
+
+body {
+    font-family: "Montserrat" !important;
+}
+
+.container-fluid {
+    padding: 3% 15% 7% !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Montserrat";
+    font-weight: 900 !important;
+}
+
+.big-head {
+    font-weight: bolder !important;
+    font-size: 3.5rem !important;
+    line-height: 1.5 !important;
+}
+
+.navbar-brand {
+    font-family: "Ubuntu" !important;
+}
+
+.navbar {
+    padding: 0 0 4.5rem !important;
+}
+
+.nav-item {
+    padding-left: 18px;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.download-btn {
+    margin: 5% 3% 5% 0;
+}
+
+.title-img {
+    width: 60%;
+    transform: rotate(25deg);
+    position: absolute;
+    right: 30%;
+}
+
+@media (max-width :1028px) {
+    .title-img {
+        position: static;
+        transform: none;
+    }
+    #title {
+        text-align: center;
+    }
+}
+
+.icon {
+    color: #ef8172;
+    margin-bottom: 1rem;
+}
+
+.icon:hover {
+    color: #ff4c68;
+}
+
+.white {
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+#features {
+    padding: 8% 16%;
+}
+
+p {
+    color: #858585;
+}
+
+.feature {
+    text-align: center;
+    padding: 5%;
+}
+
+h2 {
+    line-height: 1.5 !important;
+    font-size: 3rem !important;
+}
+
+#testimonials {
+    text-align: center;
+    background-color: #ef8172;
+    color: white;
+}
+
+#testimonials:hover {
+    background-color: #ff4c68;
+}
+
+.carousel-item {
+    padding: 7% 15% !important;
+}
+
+.testimonial-img {
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+#press {
+    background-color: #f54e25;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.press-img {
+    width: 15%;
+    margin: 20px 20px 50px;
+}
+
+#pricing {
+    padding: 100px;
+    text-align: center;
+}
+
+.price-col {
+    padding: 3% 2%;
+}
+
+#cta {
+    background-color: #e9213fde;
+}
+
+.cta-text {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0 auto;
+    width: 40%;
+}
+
+#cta:hover {
+    background-color: #f54e25;
+    color: white;
+}
+
+.content-foot {
+    text-align: center;
+    padding: 3%;
+}
+
+.but {
+    margin: 3% 2% 0 !important;
+}
+
+.but:hover {
+    color: black;
+}
+
+.foot {
+    padding-left: 3px;
+}
+
+#footer {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.foot-a {
+    text-decoration: none;
+    color: black;
+}
+
+.foot-a:hover {
+    color: #858585;
+}
