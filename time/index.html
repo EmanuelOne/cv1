@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 5rem auto;
+            text-align: center;
+            font-size: xx-large;
+            font-style: italic;
+            overflow: hidden;
+        }
+        
+        h1 {
+            color: brown;
+        }
+        
+        body:nth-child(even) {
+            color: rgb(19, 110, 190);
+        }
+        
+        p {
+            display: none;
+        }
+        
+        #count {
+            margin-top: 20px;
+            font-size: xx-large;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="txt"></h1>
+
+    <h3 id="time"></h3>
+    <p id="t">Count Down in </p>
+    <h3 id="down"></h3>
+    <h4 id="count"></h4>
+    <script>
+        let down = 5;
+        let v = () => {
+            document.getElementById("t").style.display = "block"
+        }
+
+
+
+
+
+
+        let str = "Welcome to my time"
+        let i = 0;
+        let x = setInterval(() => {
+            if (i === str.length - 1) {
+                clearInterval(x);
+                v()
+                setInterval(() => {
+                    let date = new Date();
+                    let hour = date.getHours()
+                    let minute = date.getMinutes()
+                    let seconds = date.getSeconds()
+                    seconds = seconds.toString().length > 1 ? seconds : "0" + seconds
+                    minute = minute.toString().length > 1 ? minute : "0" + minute
+                    hour = hour.toString().length > 1 ? hour - 12 : hour
+                    hour = hour.length > 1 ? hour : "0" + hour
+                    document.getElementById("time").innerHTML = hour + ":" + minute + ":" + seconds
+
+
+
+
+                }, 100);
+                let z = setInterval(() => {
+                    if (down <= 0) {
+                        clearInterval(z)
+                        document.getElementById("down").style.display = "none"
+                        document.getElementById("t").style.display = "none";
+                        setInterval(() => {
+                            let d = new Date(2020, 06, 30).getTime()
+                            let now = new Date().getTime()
+                            let distance = d - now
+                            let days = Math.floor(distance / (1000 * 60 * 60 * 24))
+                            let hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+                            let minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60))
+                            let seconds = Math.floor(distance % (1000 * 60) / (1000))
+                            seconds = seconds.toString().length > 1 ? seconds : "0" + seconds
+                            document.getElementById("count").innerHTML = days + " day " + hours + "  hours " + minutes + " minutes " + seconds + " seconds "
+                        }, 100)
+
+                    }
+                    document.getElementById("down").innerHTML = down;
+                    down--
+                }, 500)
+
+
+            }
+            document.getElementById("txt").innerHTML += str[i];
+            i++
+        }, 200)
+    </script>
+</body>
+
+</html>
